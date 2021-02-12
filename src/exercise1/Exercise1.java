@@ -17,6 +17,8 @@ public class Exercise1 {
 
         System.out.println("The average temp is " + calcAverage(temps));
         
+        System.out.println("The highest temp is " + calcMax(temps));
+        
     }
     
     public static double calcAverage(int[] temps){
@@ -44,6 +46,22 @@ public class Exercise1 {
         average = average / divBy;
         
         return average;
+        
+    }
+    
+    public static int calcMax(int[] temps){
+        
+        int highest = 0;
+        
+        for(int i = 0; i < temps.length; i++){
+            
+            if(temps[i] > highest){
+                highest = temps[i];
+            }
+            
+        }
+        
+        return highest;
         
     }
     
